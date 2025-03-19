@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на Ифтар</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?ramadan,mosque') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #FFD700;
+        }
+        .details {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .confirm-button, .audio-button {
+            background-color: #FFD700;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+        }
+        .confirm-button:hover, .audio-button:hover {
+            background-color: #FFC107;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌙 Приглашение на Ифтар</h1>
+        <p>Ассаляму алейкум, брат!</p>
+        <p class="details">Рамадан — время единства, тепла и благословений. <br> 
+        Приглашаю тебя провести этот особенный вечер вместе!</p>
+        
+        <p class="details"><strong>📅 Дата:</strong> 21 марта 2025</p>
+        <p class="details"><strong>⏰ Время:</strong> 17:00</p>
+        <p class="details"><strong>📍 Место:</strong> СТ Коктобе, 192а</p>
+
+        <a href="https://wa.me/YOUR_NUMBER" class="confirm-button">Подтвердить участие</a>
+
+        <button class="audio-button" onclick="playNasheed()">Включить нашид</button>
+        
+        <audio id="nasheed">
+            <source src="https://www.islamicreliefcanada.org/wp-content/uploads/2021/03/Ramadan-Nasheed.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудиоэлемент.
+        </audio>
+    </div>
+
+    <script>
+        function playNasheed() {
+            var audio = document.getElementById('nasheed');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+
+</body>
+</html>
